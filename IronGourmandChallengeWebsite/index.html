@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Iron Gourmand Challenge</title>
+  </head>
+    <!-- Header -->
+    <header>
+    <div>
+        <div class="flex justify-center items-center h-screen mb-48">
+            <img src="images/Warcraft.png" class="absolute w-1/2 z-10 top-[2px]" alt="Warcraft">
+            <img src="images/dragonflight.jpg" class="absolute top-[-5px] h-fit opacity-[0.65]" alt="Dragonflight">
+            <h1 class="absolute top-[352px] mt-32 text-center text-white text-6xl font-bold z-20" >Iron Gourmand Challenge</h1>
+            <div class="z-10 mt-96">
+                <h2 class="text-white text-4xl font-bold text-center" id="death-counter">Current Deaths: 0</h2>
+                <button class="bg-[#FFBF5F] font-bold text-2xl text-white w-[340px] p-3 mt-6 align-text-middle text-center rounded-[48px] transition duration-[.25s] hover:scale-[1.15]" 
+                onclick="incrementDeaths()">Another Defeated</button>
+            </div>
+            
+        </div>          
+      </div>
+    </header>
+    <!-- Body -->
+    <body class="bg-gray-700">
+        <h1 class="text-white text-7xl font-bold text-center mb-32">Reach Level 70 and Become the Greatest Chef on Azeroth!</h1>
+        <h1 class="text-white text-5xl font-bold text-center">Playable Races for this Challenge</h1>
+        <!-- Race Grid -->
+        <div class="grid gap-12 md:gap-10 xl:grid-cols-5 xl:grid-rows-2 md:grid-cols-2 md:grid-rows-6  p-[64px] xl:mx-8 md:mx-32">
+            <div class="group race transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/races/Human.png" alt="Human">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold">Human</h1>
+                </div>
+            </div>
+            <div class="group race transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/races/Kultiran.png" alt="Kultiran">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold">Kul'Tiran</h1>
+                </div>
+            </div>
+            <div class="group race transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/races/Dwarf.png" alt="Dwarf">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold">Dwarf</h1>
+                </div>
+            </div>
+            <div class="group race transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/races/DarkIronDwarf.png" alt="Dark Iron Dwarf">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold whitespace-pre-wrap text-center">Dark Iron Dwarf</h1>
+                </div>
+            </div>
+            <div class="group race transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/races/Pandaren-Alliance.png" alt="Pandaren-Alliance">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold whitespace-pre-wrap text-center">Pandaren (Alliance)</h1>
+                </div>
+            </div>
+
+            <div class="group race transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/races/Orc.png" alt="Orc">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold whitespace-pre-wrap text-center">Orc</h1>
+                </div>
+            </div>
+            <div class="group race transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/races/Maghar.png" alt="Maghar">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold whitespace-pre-wrap text-center">Mag'har Orc</h1>
+                </div>
+            </div>
+            <div class="group race transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/races/Troll.png" alt="Troll">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold whitespace-pre-wrap text-center">Troll</h1>
+                </div>
+            </div>
+            <div class="group race transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/races/Zandalari.png" alt="Zandalari">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold whitespace-pre-wrap text-center">Zandalari Troll</h1>
+                </div>
+            </div>
+            <div class="group race transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/races/Pandaren-Horde.png" alt="Pandaren-Horde">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold whitespace-pre-wrap text-center">Pandaren (Horde)</h1>
+                </div>
+            </div>
+        </div>
+        <h1 class="text-white text-5xl font-bold text-center">Playable Classes for this Challenge</h1>
+        <!-- Class Grid -->
+        <div class="grid gap-12 md:gap-10 xl:grid-cols-3 xl:grid-rows-2 lg:grid-cols-2 lg:grid-rows-4  p-[64px] xl:mx-96 lg:mx-48 ">
+            <div class="group class transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100 " >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] drop-shadow-lg rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Paladin.png" alt="Paladin">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold">Paladin</h1>
+                </div>
+            </div>
+            <div class="group class transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] drop-shadow-lg rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Warrior.png" alt="Warrior">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold">Warrior</h1>
+                </div>
+            </div>
+            <div class="group class transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] drop-shadow-lg rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Rouge.png" alt="Rouge">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold">Rouge</h1>
+                </div>
+            </div>
+            <div class="group class transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] drop-shadow-lg rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Monk.png" alt="Monk">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold whitespace-pre-wrap text-center">Monk</h1>
+                </div>
+            </div>
+            <div class="group class transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] drop-shadow-lg rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Mage.png" alt="Mage">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold whitespace-pre-wrap text-center">Mage</h1>
+                </div>
+            </div>
+            <div class="group class transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] drop-shadow-lg rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Priest.png" alt="Priest">
+                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                  <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold whitespace-pre-wrap text-center">Priest</h1>
+                </div>
+            </div>
+        </div>
+        <h1 class="text-white text-5xl font-bold text-center mb-16">Rules for this Challenge</h1>
+        <div class="flex justify-center">
+          <div class="max-w-4xl">
+            <ul class="list-disc pl-6 text-white mb-4 text-xl font-semibold ">
+              <li>Death = Delete</li>
+              <li>If you died in a particular zone, you can not quest there again on your next run.</li>
+              <li>Must go through Exiles Reach if not using an allied race (makes 1-10 the same for all characters regardless of race or class)</li>
+              <li>Only White gear. Tabards that do not give any boosts to xp or stats are ok.</li>
+              <li>No external help (no groups, no alts/main assistance, no guilds, no parties, no AH no Mail)</li>
+              <li>Pet Battles are not allowed.</li>
+              <li>Cannot boost your character.</li>
+              <li>No dungeons, raids, world bosses, arenas, or battlegrounds allowed. Warmode must be turned on as soon as it is possible</li>
+              <li>Only buffs gained from your class, or food is allowed.</li>
+              <li>No Refer-a-Friend or other XP-boosting activites, gear or buffs (Darkmoon Faire, Heirlooms, Garrison potion, Monk XP buff etc).</li>
+              <li>No Heirlooms.</li>
+              <li>Can only use Chromie Time for Cataclysm, Wrath, and Pandaria. No other expansions can be used.</li>
+              <li>Must stay on Azeroth for the duration of the characters run.</li>
+              <li>No Main Professions. Only Cooking and Fishing.</li>
+              <li>No Flying Mounts. Dragonriding is ok once you enter the Dragon Isles.</li>
+            </ul>
+            <h2 class="text-2xl font-bold mb-4 text-white">Additional Rules For Allied Races</h2>
+            <ul class="list-disc pl-6 text-white text-xl font-semibold mb-4">
+              <li>If using an Allied Race, you must vendor all gear you are wearing and purchase white starting gear. </li>
+              <li>You must start your journey going to your racial zone (Zuldazar for Zandalari, Durotar for Mag'har, Dun'morough for Dark Iron Dwarfs, etc). </li>
+              <li>You must complete the cooking/fishing achievements of that zone and then start from the beginning. So if your race takes you back to Zandalar or Kul'tiras, you would do Zandalari/Kultiran cooking/fishing first, then move on to classic, cataclysm, northrend, pandaria, etc.</li>
+            </ul>
+          </div>
+        </div>
+        
+    </body>
+    <!-- Footer -->
+    <footer>
+      <p class="flex justify-center items-center text-white font-semibold">&copy Will Marda 2023. Images belong to Blizzard and dcmjs</p>
+        <script src="script.js"></script>
+    </footer>
+
+</html>
