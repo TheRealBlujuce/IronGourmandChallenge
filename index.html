@@ -10,12 +10,12 @@
     <header>
     <div>
         <div class="flex justify-center items-center h-screen mb-48">
-            <img src="images/Warcraft.png" class="absolute w-1/2 z-10 top-[2px]" alt="Warcraft">
-            <img src="images/dragonflight.jpg" class="absolute top-[-5px] h-fit opacity-[0.65]" alt="Dragonflight">
-            <h1 class="absolute top-[352px] mt-32 text-center text-white text-6xl font-bold z-20" >Iron Gourmand Challenge</h1>
-            <div class="z-10 mt-96">
-                <h2 class="text-white text-4xl font-bold text-center" id="death-counter">Current Deaths: 0</h2>
-                <button class="bg-[#FFBF5F] font-bold text-2xl text-white w-[340px] p-3 mt-6 align-text-middle text-center rounded-[48px] transition duration-[.25s] hover:scale-[1.15]" 
+            <img src="images/Warcraft.png" class="absolute w-9/12 lg:w-1/2 z-10 top-16 lg:top-[2px]" alt="Warcraft">
+            <img src="images/dragonflight.jpg" class="absolute top-[-5px] h-fit opacity-0 lg:opacity-[0.65]" alt="Dragonflight">
+            <h1 class="absolute top-72 sm:top-1/2 lg:top-1/2 text-center text-white text-5xl lg:text-6xl font-bold z-20" >Iron Gourmand Challenge</h1>
+            <div class="z-10 mt-32 sm:mt-80 lg:mt-96">
+                <h2 class="text-white text-3xl lg:text-4xl font-bold text-center" id="death-counter">Current Deaths: 0</h2>
+                <button class="bg-[#FFBF5F] font-bold text-xl lg:text-2xl text-white w-[264px] lg:w-[340px] p-3 mt-6 align-text-middle text-center rounded-[48px] transition duration-[.25s] hover:scale-[1.15]" 
                 onclick="incrementDeaths()">Another Defeated</button>
             </div>
             
@@ -27,7 +27,7 @@
         <h1 class="text-white text-7xl font-bold text-center mb-32">Reach Level 70 and Become the Greatest Chef on Azeroth!</h1>
         <h1 class="text-white text-5xl font-bold text-center">Playable Races for this Challenge</h1>
         <!-- Race Grid -->
-        <div class="grid gap-12 md:gap-10 xl:grid-cols-5 xl:grid-rows-2 md:grid-cols-2 md:grid-rows-6  p-[64px] xl:mx-8 md:mx-32">
+        <div class="grid gap-12 md:gap-10 xl:grid-cols-5 xl:grid-rows-2 md:grid-cols-2 sm:grid-cols-1 p-[64px] xl:mx-8 md:mx-32 ">
             <div class="group race transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
                 <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/races/Human.png" alt="Human">
                 <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
@@ -92,39 +92,39 @@
         </div>
         <h1 class="text-white text-5xl font-bold text-center">Playable Classes for this Challenge</h1>
         <!-- Class Grid -->
-        <div class="grid gap-12 md:gap-10 xl:grid-cols-3 xl:grid-rows-2 lg:grid-cols-2 lg:grid-rows-4  p-[64px] xl:mx-96 lg:mx-48 ">
+        <div class="grid gap-12 md:gap-10 xl:grid-cols-3 xl:grid-rows-2 md:grid-cols-2 grid-cols-1 p-[64px] xl:mx-96 md:mx-32 ">
             <div class="group class transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100 " >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] drop-shadow-lg rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Paladin.png" alt="Paladin">
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Paladin.png" alt="Paladin">
                 <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
                   <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold">Paladin</h1>
                 </div>
             </div>
             <div class="group class transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] drop-shadow-lg rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Warrior.png" alt="Warrior">
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Warrior.png" alt="Warrior">
                 <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
                   <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold">Warrior</h1>
                 </div>
             </div>
             <div class="group class transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] drop-shadow-lg rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Rouge.png" alt="Rouge">
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Rouge.png" alt="Rouge">
                 <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
                   <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold">Rouge</h1>
                 </div>
             </div>
             <div class="group class transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] drop-shadow-lg rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Monk.png" alt="Monk">
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Monk.png" alt="Monk">
                 <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
                   <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold whitespace-pre-wrap text-center">Monk</h1>
                 </div>
             </div>
             <div class="group class transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] drop-shadow-lg rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Mage.png" alt="Mage">
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Mage.png" alt="Mage">
                 <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
                   <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold whitespace-pre-wrap text-center">Mage</h1>
                 </div>
             </div>
             <div class="group class transition duration-[.25s] shadow-2xl hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] drop-shadow-lg rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Priest.png" alt="Priest">
+                <img class="w-[600px] lg:w-[400px] md:w-[350px] rounded-[16px] opacity-[0.7] group-hover:opacity-[0.5] group-hover:blur-[0.75px] duration-[.25s]" src="images/classes/Priest.png" alt="Priest">
                 <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
                   <h1 class="text-white text-6xl lg:text-5xl md:text-4xl font-bold whitespace-pre-wrap text-center">Priest</h1>
                 </div>
