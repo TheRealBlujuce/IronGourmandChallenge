@@ -878,6 +878,10 @@ video {
   height: 100vh;
 }
 
+.h-\[485px\] {
+  height: 485px;
+}
+
 .w-\[264px\] {
   width: 264px;
 }
@@ -2699,6 +2703,10 @@ video {
 
   .md\:w-\[350px\] {
     width: 350px;
+  }
+
+  .md\:w-\[325px\] {
+    width: 325px;
   }
 
   .md\:grid-cols-2 {
