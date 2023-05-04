@@ -4,7 +4,7 @@
 const cards = document.querySelectorAll('.card');
 
 const cardOptions = {
-  threshold: 0.5,
+  threshold: 1,
   rootMargin: '0px 0px -100px 0px'
 };
 
@@ -30,7 +30,7 @@ cards.forEach(card => {
 const images = document.querySelectorAll("[data-src]");
 
 const imgOptions = {
-    threshold: 0.5,
+    threshold: 1,
     rootMargin: "0px 0px -100px 0px"
 }
 
