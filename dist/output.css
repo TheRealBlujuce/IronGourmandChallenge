@@ -2674,6 +2674,10 @@ video {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
+  .sm\:p-4 {
+    padding: 1rem;
+  }
+
   .sm\:underline {
     text-decoration-line: underline;
   }
