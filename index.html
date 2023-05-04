@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
     <title>Iron Gourmand Challenge</title>
   </head>
     <!-- Header -->
     <header>
     <div>
         <div class="flex justify-center items-center h-screen mb-48">
-            <img src="images/Warcraft.png" class="absolute w-9/12 lg:w-1/2 z-10 top-16 lg:top-[2px]" alt="Warcraft">
-            <img src="images/dragonflight.jpg" class="absolute top-[-5px] h-fit opacity-0 lg:opacity-[0.65]" alt="Dragonflight">
-            <h1 class="absolute top-72 sm:top-1/2 lg:top-1/2 text-center text-white text-5xl lg:text-6xl font-bold z-20" >Iron Gourmand Challenge</h1>
-            <div class="z-10 mt-64 sm:mt-80 lg:mt-96">
+            
+            
+            <div class="absolute bg-gray-600 w-full h-screen flex flex-col shadow-xl"></div>
+            <img src="images/Warcraft.png" class="absolute top-12 lg:top-0 w-[72rem] lg:w-[56rem]" alt="Warcraft">
+            <h1 class="absolute top-[20rem] sm:top-[24rem] md:mt-[6rem] lg:top-[24rem] text-center text-white text-5xl lg:text-6xl font-bold z-20" >Iron Gourmand Challenge</h1>
+            <div class="z-10 mt-[12rem] sm:mt-80 md:mt-[32rem] lg:mt-[32rem] xl:mt-[28rem]">
                 <h2 class="text-white text-3xl lg:text-4xl font-bold text-center" id="death-counter">Current Deaths: 0</h2>
                 <button class="bg-[#FFBF5F] font-bold text-xl lg:text-2xl text-white w-[264px] lg:w-[340px] p-3 mt-6 align-text-middle text-center rounded-[48px] transition duration-[.25s] hover:scale-[1.15]" 
                 onclick="incrementDeaths()">Another Defeated</button>
@@ -24,271 +27,294 @@
     </header>
     <!-- Body -->
     <body class="bg-gray-700">
-        <h1 class="text-white text-7xl font-bold text-center mb-32">Reach Level 70 and Become the Greatest Chef on Azeroth!</h1>
-        <h1 class="text-white text-5xl font-bold text-center">Playable Races for this Challenge</h1>
+        
+        <!-- The Rules -->
+        <div class="mt-[6rem]">
+          <h1 class="text-white text-6xl font-bold text-center mt-16 mb-24 w-auto p-6">The Rules</h1>
+            <div class="flex justify-center">
+              <div class="p-2">
+                <div class="grid grid-cols-1 xl:grid-cols-5 text-white text-xl font-medium gap-[12px] gap-y-10">
+    
+                  <!-- Rule 1 -->
+                  <div class="bg-gray-600 max-w-[350px] h-[475px] rounded-[16px] flex flex-col shadow-xl">
+                    <div class="h-[14.5rem]">
+                      <img src="images/shadowlands.png" class="w-fit h-56 rounded-t-[16px] opacity-[0.5]" alt="temp">
+                      <div class="relative top-[-224px] rounded-t-[16px] backdrop-blur-sm w-auto h-56"></div>
+                      <h3 class="relative top-[-364px] text-center text-3xl opacity-[0.8] p-4 w-auto">One Life Only</h3>
+                    </div>
+                    <ul class="h-48">
+                      <li class="text-base lg:text-lg italic p-4 pt-0">Death is permanent. If you died in a particular zone, you can not quest there again on your next run. 
+                        You must live off the land. Hunt, Skin, Fish, Sew and Craft. Use your proffesions of choice to help you survive the open world.</li>
+                    </ul>
+                  </div>
+                  <!-- Rule 2 -->
+                  <div class="bg-gray-600 max-w-[350px] h-[475px] rounded-[16px] flex flex-col shadow-xl">
+                    <div class="h-[14.5rem]">
+                      <img src="images/dragonflight.png" class="w-fit h-56 rounded-t-[16px] opacity-[0.5]" alt="temp">
+                      <div class="relative top-[-224px] rounded-t-[16px] backdrop-blur-sm w-auto h-56"></div>
+                      <h3 class="relative top-[-364px] text-center text-3xl opacity-[0.8] p-4 w-auto">Exploring Azeroth</h3>
+                    </div>
+                    <ul class="h-48">
+                      <li class="text-base lg:text-lg italic p-4 pt-0">Must go through Exiles Reach if not using an allied race. Allied Races must go through their racial zone first.
+                        Chromie Time for Cataclysm, Wrath and Pandaria can be used. You must stay in Azeroth.  
+                        No Flying Mounts can be used. Dragon Riding however, can be used once in the Dragon Isles.
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Rule 3 -->
+                  <div class="bg-gray-600 max-w-[350px] h-[475px] rounded-[16px] flex flex-col shadow-xl">
+                    <div class="h-[14.5rem]">
+                      <img src="images/gear.png" class="w-fit h-56 rounded-t-[16px] opacity-[0.5]" alt="temp">
+                      <div class="relative top-[-224px] rounded-t-[16px] backdrop-blur-sm w-auto h-56"></div>
+                      <h3 class="relative top-[-364px] text-center text-3xl opacity-[0.8] p-4 w-auto">The Clothes On Your Back</h3>
+                    </div>
+                    <ul class="h-48">
+                      <li class="text-base lg:text-lg italic p-4 pt-0">Only gear you craft yourself can be used. Tabards that do not give any boosts to xp or stats are ok.
+                        You must also play Solo. You can not send yourself money, gear or other items. The AH and Mail is also prohibited. 
+                        Buffs gained from your class abilities or food you cooked yourself is allowed.
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Rule 4 -->
+                  <div class="bg-gray-600 max-w-[350px] h-[475px] rounded-[16px] flex flex-col shadow-xl">
+                    <div class="h-[14.5rem]">
+                      <img src="images/oldsoilder.png" class="w-fit h-56 rounded-t-[16px] opacity-[0.5]" alt="temp">
+                      <div class="relative top-[-224px] rounded-t-[16px] backdrop-blur-sm w-auto h-56"></div>
+                      <h3 class="relative top-[-364px] text-center text-3xl opacity-[0.8] p-4 w-auto">Trial By Combat</h3>
+                    </div>
+                    <ul class="h-48">
+                      <li class="text-base lg:text-lg italic p-4 pt-0">Warmode must be used and turned on as soon as possible. Dungeons, raids, world bosses, pet battles, arenas or battlegrounds are not allowed.
+                        Experience boosting activites, gear or buffs are not alowed. This includes but is not limited to: The Darkmoon Faire, Heirlooms, Monk XP Buff, etc.
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Rule 5 -->
+                  <div class="bg-gray-600 max-w-[350px] h-[475px] rounded-[16px] flex flex-col shadow-xl">
+                    <div class="h-[14.5rem]">
+                      <img src="images/map.png" class="w-fit h-56 rounded-t-[16px] opacity-[0.5]" alt="temp">
+                      <div class="relative top-[-224px] rounded-t-[16px] backdrop-blur-sm w-auto h-56"></div>
+                      <h3 class="relative top-[-364px] text-center text-3xl opacity-[0.8] p-4 w-auto">Hearth And Home</h3>
+                    </div>
+                    <ul class="h-48">
+                      <li class="text-base lg:text-lg italic p-4 pt-0">Any race and class combo can be used. However, Allied Races must vendor all gear and purchase white starting gear. 
+                        Allied Races must complete the cooking/fishing achievements of their racial zone first before moving on to the classic, northrend, cataclysm, pandaria, bfa, and 
+                        dragonflight achievements.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- End Of The Rules -->
+        </div>
+        <!-- The Goals -->
+          <div class="mt-[6rem]">
+            <h1 class="text-white text-6xl font-bold text-center mt-16 mb-24 w-auto p-6">The Goals</h1>
+            <h1 class="text-white text-3xl font-bold text-center mt-[-4rem] mb-6 w-auto p-6">Complete The Following Achievements And Reach Level 70</h1>
+            <div class="flex justify-center">
+              <div class="p-2 xl:p-14">
+                <div class="grid grid-cols-1 xl:grid-cols-6 text-white text-xl w-full font-medium gap-[12px] gap-y-10">
+    
+                  <!-- Rule 1 -->
+                  <div class="bg-gray-600 max-w-[325px] h-[375px] rounded-[16px] flex flex-col shadow-xl">
+                    <div class="h-[14.5rem]">
+                      <img src="images/classic.png" class="w-fit h-56 rounded-t-[16px] opacity-[0.5]" alt="temp">
+                      <div class="relative top-[-224px] rounded-t-[16px] backdrop-blur-sm w-auto h-56"></div>
+                      <h3 class="relative top-[-364px] text-center text-3xl opacity-[0.8] p-4 w-auto">Mainland Azeroth</h3>
+                    </div>
+                    <ul class="h-48 text-base lg:text-lg italic p-4 pt-0">
+                      <li class="font-medium">Lunch Lady</li>
+                      <li class="font-medium">Short Order Cook</li>
+                    </ul>
+                  </div>
+                  <!-- Rule 2 -->
+                  <div class="bg-gray-600 max-w-[325px] h-[375px] rounded-[16px] flex flex-col shadow-xl">
+                    <div class="h-[14.5rem]">
+                      <img src="images/wrath.png" class="w-fit h-56 rounded-t-[16px] opacity-[0.5]" alt="temp">
+                      <div class="relative top-[-224px] rounded-t-[16px] backdrop-blur-sm w-auto h-56"></div>
+                      <h3 class="relative top-[-364px] text-center text-3xl opacity-[0.8] p-4 w-auto">Northrend</h3>
+                    </div>
+                    <ul class="h-48 text-base lg:text-lg italic p-4 pt-0">
+                      <li class="font-medium">Northrend Cook</li>
+                      <li class="font-medium">Northrend Fisherman</li>
+                      <li class="font-medium">The Northrend Gourmet</li>
+                    </ul>
+                  </div>
+                  <!-- Rule 3 -->
+                  <div class="bg-gray-600 max-w-[325px] h-[375px] rounded-[16px] flex flex-col shadow-xl">
+                    <div class="h-[14.5rem]">
+                      <img src="images/cataclysm.png" class="w-fit h-56 rounded-t-[16px] opacity-[0.5]" alt="temp">
+                      <div class="relative top-[-224px] rounded-t-[16px] backdrop-blur-sm w-auto h-56"></div>
+                      <h3 class="relative top-[-364px] text-center text-3xl opacity-[0.8] p-4 w-auto">Cataclysm</h3>
+                    </div>
+                    <ul class="h-48 text-base lg:text-lg italic p-4 pt-0">
+                      <li class="font-medium">Cataclysmic Cook</li>
+                      <li class="font-medium">Cataclysmic Fisherman</li>
+                      <li class="font-medium">The Cataclysmic Gourmet</li>
+                    </ul>
+                  </div>
+                  <!-- Rule 4 -->
+                  <div class="bg-gray-600 max-w-[325px] h-[375px] rounded-[16px] flex flex-col shadow-xl">
+                    <div class="h-[14.5rem]">
+                      <img src="images/pandaria.png" class="w-fit h-56 rounded-t-[16px] opacity-[0.5]" alt="temp">
+                      <div class="relative top-[-224px] rounded-t-[16px] backdrop-blur-sm w-auto h-56"></div>
+                      <h3 class="relative top-[-364px] text-center text-3xl opacity-[0.8] p-4 w-auto">Pandaria</h3>
+                    </div>
+                    <ul class="h-48 text-base lg:text-lg italic p-4 pt-0">
+                        <li class="font-medium">Zen Master Cook</li>
+                        <li class="font-medium">Zen Master Fisherman</li>
+                        <li class="font-medium">The Pandaren Gourmet</li>
+                    </ul>
+                  </div>
+                  <!-- Rule 5 -->
+                  <div class="bg-gray-600 max-w-[325px] h-[375px] rounded-[16px] flex flex-col shadow-xl">
+                    <div class="h-[14.5rem]">
+                      <img src="images/bfa.png" class="w-fit h-56 rounded-t-[16px] opacity-[0.5]" alt="temp">
+                      <div class="relative top-[-224px] rounded-t-[16px] backdrop-blur-sm w-auto h-56"></div>
+                      <h3 class="relative top-[-364px] text-center text-3xl opacity-[0.8] p-4 w-auto">Zandalar / Kul'Tiras</h3>
+                    </div>
+                    <ul class="h-48 text-base lg:text-lg italic p-4 pt-0">
+                      <li class="font-medium">Zandalari/Kultiran Cook</li>
+                      <li class="font-medium">Zandalari/Kultiran Fisherman</li>
+                      <li class="font-medium">The Zandalari/Kultiran Menu</li>
+                    </ul>
+                  </div>
+                  <!-- Rule 5 -->
+                  <div class="bg-gray-600 max-w-[325px] h-[375px] rounded-[16px] flex flex-col shadow-xl">
+                    <div class="h-[14.5rem]">
+                      <img src="images/dragonflight-key.png" class="w-fit h-56 rounded-t-[16px] opacity-[0.5]" alt="temp">
+                      <div class="relative top-[-224px] rounded-t-[16px] backdrop-blur-sm w-auto h-56"></div>
+                      <h3 class="relative top-[-364px] text-center text-3xl opacity-[0.8] p-4 w-auto">Dragon Isles</h3>
+                    </div>
+                    <ul class="h-48 text-base lg:text-lg italic p-4 pt-0">
+                      <li class="font-medium">Dragon Isles Cook</li>
+                      <li class="font-medium">Dragon Isles Fisherman</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- End Of The Goals -->
         <!-- Race Grid -->
-        <div class="grid gap-12 md:gap-10 xl:grid-cols-5 xl:grid-rows-2 md:grid-cols-2 sm:grid-cols-1 p-[64px] xl:mx-8 md:mx-32 ">
-            <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px] group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Human.png" alt="Human">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold">Human</h1>
-                </div>
-            </div>
-            <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Kultiran.png" alt="Kultiran">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold">Kul'Tiran</h1>
-                </div>
-            </div>
-            <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Dwarf.png" alt="Dwarf">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold">Dwarf</h1>
-                </div>
-            </div>
-            <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/DarkIronDwarf.png" alt="Dark Iron Dwarf">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Dark Iron Dwarf</h1>
-                </div>
-            </div>
-            <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Pandaren-Alliance.png" alt="Pandaren-Alliance">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Pandaren (Alliance)</h1>
-                </div>
-            </div>
-
-            <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Orc.png" alt="Orc">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Orc</h1>
-                </div>
-            </div>
-            <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Maghar.png" alt="Maghar">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Mag'har Orc</h1>
-                </div>
-            </div>
-            <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Troll.png" alt="Troll">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Troll</h1>
-                </div>
-            </div>
-            <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Zandalari.png" alt="Zandalari">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Zandalari</h1>
-                </div>
-            </div>
-            <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Pandaren-Horde.png" alt="Pandaren-Horde">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Pandaren (Horde)</h1>
-                </div>
-            </div>
-        </div>
-        <h1 class="text-white text-5xl font-bold text-center">Playable Classes for this Challenge</h1>
+        <!-- <div class="mt-[6rem]">
+          <h1 class="text-white text-6xl font-bold text-center mt-16 mb-16 w-auto p-6">Playable Races for this Challenge</h1>
+          <div class="grid gap-12 md:gap-10 xl:grid-cols-5 xl:grid-rows-2 md:grid-cols-2 sm:grid-cols-1 p-[64px] xl:mx-8 md:mx-32 ">
+              <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px] group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Human.png" alt="Human">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold">Human</h1>
+                  </div>
+              </div>
+              <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Kultiran.png" alt="Kultiran">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold">Kul'Tiran</h1>
+                  </div>
+              </div>
+              <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Dwarf.png" alt="Dwarf">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold">Dwarf</h1>
+                  </div>
+              </div>
+              <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/DarkIronDwarf.png" alt="Dark Iron Dwarf">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Dark Iron Dwarf</h1>
+                  </div>
+              </div>
+              <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Pandaren-Alliance.png" alt="Pandaren-Alliance">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Pandaren (Alliance)</h1>
+                  </div>
+              </div>
+  
+              <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Orc.png" alt="Orc">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Orc</h1>
+                  </div>
+              </div>
+              <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Maghar.png" alt="Maghar">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Mag'har Orc</h1>
+                  </div>
+              </div>
+              <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Troll.png" alt="Troll">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Troll</h1>
+                  </div>
+              </div>
+              <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Zandalari.png" alt="Zandalari">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Zandalari</h1>
+                  </div>
+              </div>
+              <div class="group race transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/races/Pandaren-Horde.png" alt="Pandaren-Horde">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Pandaren (Horde)</h1>
+                  </div>
+              </div>
+          </div>
+        </div> -->
+        <!-- End Of Race Grid -->
         <!-- Class Grid -->
-        <div class="grid gap-12 md:gap-10 xl:grid-cols-3 xl:grid-rows-2 md:grid-cols-2 grid-cols-1 p-[64px] xl:mx-96 md:mx-32 ">
-            <div class="group class transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100 " >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/classes/Paladin.png" alt="Paladin">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold">Paladin</h1>
-                </div>
-            </div>
-            <div class="group class transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/classes/Warrior.png" alt="Warrior">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold">Warrior</h1>
-                </div>
-            </div>
-            <div class="group class transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/classes/Rouge.png" alt="Rouge">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold">Rouge</h1>
-                </div>
-            </div>
-            <div class="group class transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/classes/Monk.png" alt="Monk">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Monk</h1>
-                </div>
-            </div>
-            <div class="group class transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/classes/Mage.png" alt="Mage">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Mage</h1>
-                </div>
-            </div>
-            <div class="group class transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
-                <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/classes/Priest.png" alt="Priest">
-                <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                  <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Priest</h1>
-                </div>
-            </div>
-        </div>
-        <h1 class="text-white text-5xl font-bold text-center mb-16">The Goals</h1>
-        <div class="flex justify-center">
-          <div class="max-w-4xl">
-            <ul class="grid grid-cols-2 justify-center items-center pl-32 text-white mb-4 text-xl font-semibold gap-x-24 gap-y-16 ">
-              
-              <div>
-                <p class="text-2xl font-bold mb-2">Classic</p>
-                <li class="font-medium">75 Point Cooking and Fishing minimum</li>
-                <li class="font-medium">Lunch Lady</li>
-                <li class="font-medium">Short Order Cook</li>
+        <!-- <div class="mt-[6rem] mb-12">
+          <h1 class="text-white text-6xl font-bold text-center mb-16 p-6">Playable Classes for this Challenge</h1>
+          
+          <div class="grid gap-12 md:gap-10 xl:grid-cols-3 xl:grid-rows-2 md:grid-cols-2 grid-cols-1 p-[64px] xl:mx-96 md:mx-32 ">
+              <div class="group class transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100 " >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/classes/Paladin.png" alt="Paladin">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold">Paladin</h1>
+                  </div>
               </div>
-              <div>
-                <p class="text-2xl font-bold mb-2">Northrend</p>
-                <li class="font-medium">Northrend Cook</li>
-                <li class="font-medium">Northrend Fisherman</li>
-                <li class="font-medium">The Northrend Gourmet</li>
+              <div class="group class transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/classes/Warrior.png" alt="Warrior">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold">Warrior</h1>
+                  </div>
               </div>
-              
-              <div>
-                <p class="text-2xl font-bold mb-2">Cataclysm</p>
-                <li class="font-medium">Cataclysmic Cook</li>
-                <li class="font-medium">Cataclysmic Fisherman</li>
-                <li class="font-medium">The Cataclysmic Gourmet</li>
+              <div class="group class transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/classes/Rouge.png" alt="Rouge">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold">Rouge</h1>
+                  </div>
               </div>
-
-              <div>
-                <p class="text-2xl font-bold mb-2">Pandaria</p>
-                <li class="font-medium">Zen Master Cook</li>
-                <li class="font-medium">Zen Master Fisherman</li>
-                <li class="font-medium">The Pandaren Gourmet</li>
+              <div class="group class transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/classes/Monk.png" alt="Monk">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Monk</h1>
+                  </div>
               </div>
-              <div>
-                <p class="text-2xl font-bold mb-2">Battle For Azeroth</p>
-                <li class="font-medium">Zandalari/Kultiran Cook</li>
-                <li class="font-medium">Zandalari/Kultiran Fisherman</li>
-                <li class="font-medium">The Zandalari/Kultiran Menu</li>
+              <div class="group class transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/classes/Mage.png" alt="Mage">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Mage</h1>
+                  </div>
               </div>
-              <div>
-                <p class="text-2xl font-bold mb-2">Dragonflight</p>
-                <li class="font-medium">Dragon Isles Cook</li>
-                <li class="font-medium">Dragon Isles Fisherman</li>
+              <div class="group class transition duration-[.25s] hover:scale-[1.15] z-0 hover:z-100" >
+                  <img class="w-[600px] lg:w-[400px] md:w-[350px] shadow-2xl rounded-[32px]  group-hover:opacity-[0.5] group-hover:blur-[1px] duration-[.25s]" src="images/classes/Priest.png" alt="Priest">
+                  <div class="opacity-0 hover:opacity-100 transition duration-[.5s] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <h1 class="text-white text-center lg:text-5xl text-4xl font-bold whitespace-pre-wrap text-center">Priest</h1>
+                  </div>
               </div>
-
-            </ul>
           </div>
-        </div>
-        <h1 class="text-white text-5xl font-bold text-center mt-16 mb-16">The Rules</h1>
-        <div class="flex justify-center">
-          <div class="pt-72 mt-[-300px] justify-center items-center">
-            <div class="grid grid-cols-1 xl:grid-cols-2 text-white text-xl font-medium gap-[12px] gap-y-10">
-
-              <!-- Rule 1 -->
-              <div class="bg-gray-600 max-w-[350px] h-[475px] rounded-[24px] flex flex-col shadow-xl">
-                <div>
-                  <img src="images/oldsoilder.png" class="w-fit h-48 rounded-t-[24px] opacity-[0.5]" alt="temp">
-                  <h3 class="relative top-[-116px] left-[15%] text-center xl:text-4xl lg:text-2xl opacity-[0.8] backdrop-blur-lg p-4 rounded-[24px] w-fit">One Life Only</h3>
-                </div>
-                <ul class="h-max mb-[80px]">
-                  <li class="text-base lg:text-lg italic p-4 pt-0">Death is permanent. If you died in a particular zone, you can not quest there again on your next run.</li>
-                </ul>
-              </div>
-              <!-- Rule 2 -->
-              <div class="bg-gray-600 max-w-[600px] h-[200px] rounded-[24px] flex shadow-xl">
-                <img src="images/oldsoilder.png" class="w-1/2 h-fill rounded-l-[24px]" alt="temp">
-                <ul class="w-1/2 mr-4">
-                  <li class="text-xl lg:text-2xl p-4">Starting Zone</li>
-                  <li class="text-base lg:text-lg italic p-4 pt-0">Must go through Exiles Reach if not using an allied race. Allied Races must go through their racial zone first.</li>
-                </ul>
-              </div>
-              <!-- Rule 3 -->
-              <div class="bg-gray-600 max-w-[600px] h-[200px] rounded-[24px] flex shadow-xl">
-                <ul class="w-1/2 ml-4">
-                  <li class="text-xl lg:text-2xl p-4">Gear</li>
-                  <li class="text-base lg:text-lg italic p-4 pt-0">Only gear you craft yourself can be used. Tabards that do not give any boosts to xp or stats are ok.</li>
-                </ul>
-                <img src="images/oldsoilder.png" class="w-1/2 h-fill rounded-r-[24px]" alt="temp">
-              </div>
-              <!-- Rule 4 -->
-              <div class="bg-gray-600 max-w-[600px] h-[200px] rounded-[24px] flex shadow-xl">
-                <ul class="w-1/2 ml-4">
-                  <li class="text-xl lg:text-2xl p-4">Assistance</li>
-                  <li class="text-base lg:text-lg italic p-4 pt-0">You must play Solo. No Sending yourself money, gear or other items. The AH and Mail is also prohibited. </li>
-                </ul>
-                <img src="images/oldsoilder.png" class="w-1/2 h-fill rounded-r-[24px]" alt="temp">
-              </div>
-              <!-- Rule 5 -->
-              <div class="bg-gray-600 max-w-[600px] h-[200px] rounded-[24px] flex shadow-xl">
-                <img src="images/oldsoilder.png" class="w-1/2 h-fill rounded-l-[24px]" alt="temp">
-                <ul class="w-1/2 mr-4">
-                  <li class="text-xl lg:text-2xl p-4">Living off the Land</li>
-                  <li class="text-base lg:text-lg italic p-4 pt-0">You must live off the land. Hunt, Skin, Fish, Sew and Craft away. Use the proffesions to help you survive Azeroth.</li>
-                </ul>
-              </div>
-              <!-- Rule 6 -->
-              <div class="bg-gray-600 max-w-[600px] h-[200px] rounded-[24px] flex shadow-xl">
-                <img src="images/oldsoilder.png" class="w-1/2 h-fill rounded-l-[24px]" alt="temp">
-                <ul class="w-1/2 mr-4">
-                  <li class="text-xl lg:text-2xl p-4">No Boosts</li>
-                  <li class="text-base lg:text-lg italic p-4 pt-0">XP-boosting activites, gear or buffs are not alowed. This includes but is not limited to: Darkmoon Faire, Heirlooms.</li>
-                </ul>
-              </div>
-              <!-- Rule 7 -->
-              <div class="bg-gray-600 max-w-[600px] h-[200px] rounded-[24px] flex shadow-xl">
-                <ul class="w-1/2 ml-4">
-                  <li class="text-xl lg:text-2xl p-4">Self Help Abilities</li>
-                  <li class="text-base lg:text-lg italic p-4 pt-0">Only buffs gained from your class abilities, casted on you by other players or food is allowed.</li>
-                </ul>
-                <img src="images/oldsoilder.png" class="w-1/2 h-fill rounded-r-[24px]" alt="temp">
-              </div>
-              <!-- Rule 8 -->
-              <div class="bg-gray-600 max-w-[600px] h-[200px] rounded-[24px] flex shadow-xl">
-                <ul class="w-1/2 ml-4">
-                  <li class="text-xl lg:text-2xl p-4">Trial By Combat</li>
-                  <li class="text-base lg:text-lg italic p-4 pt-0">Warmode must be used. Dungeons, raids, world bosses, pet battles, arenas or battlegrounds are not allowed.</li>
-                </ul>
-                <img src="images/oldsoilder.png" class="w-1/2 h-fill rounded-r-[24px]" alt="temp">
-              </div>
-              <!-- Rule 9 -->
-              <div class="bg-gray-600 max-w-[600px] h-[200px] rounded-[24px] flex shadow-xl">
-                <img src="images/oldsoilder.png" class="w-1/2 h-fill rounded-l-[24px]" alt="temp">
-                <ul class="w-1/2 mr-4">
-                  <li class="text-xl lg:text-2xl p-4">Azeroth Needs You</li>
-                  <li class="text-base lg:text-lg italic p-4 pt-0">You can not leave Azeroth.Chromie Time for Cataclysm, Wrath and Pandaria can be used.</li>
-                </ul>
-              </div>
-              <!-- Rule 10 -->
-              <div class="bg-gray-600 max-w-[600px] h-[200px] rounded-[24px] flex shadow-xl">
-                <img src="images/oldsoilder.png" class="w-1/2 h-fill rounded-l-[24px]" alt="temp">
-                <ul class="w-1/2 mr-4">
-                  <li class="text-xl lg:text-2xl p-4">Explore</li>
-                  <li class="text-base lg:text-lg italic p-4 pt-0">No Flying Mounts can be used. Dragon Riding however, can be used once in the Dragon Isles.</li>
-                </ul>
-              </div>
-              <!-- Rule 11 -->
-              <div class="bg-gray-600 max-w-[600px] h-[200px] rounded-[24px] flex shadow-xl">
-                <ul class="w-1/2 ml-4">
-                  <li class="text-xl lg:text-2xl p-4">The Races of Azeroth</li>
-                  <li class="text-base lg:text-lg italic p-4 pt-0">Only the races and classes below can be used. Allied Races must vendor all gear and purchase white starting gear.</li>
-                </ul>
-                <img src="images/oldsoilder.png" class="w-1/2 h-fill rounded-r-[24px] ml-6" alt="temp">
-              </div>
-              <!-- Rule 11 -->
-              <div class="bg-gray-600 max-w-[600px] h-[200px] rounded-[24px] flex shadow-xl">
-                <ul class="w-1/2 ml-4">
-                  <li class="text-xl lg:text-2xl p-4">Hearth Is Home </li>
-                  <li class="text-base lg:text-lg italic p-4 pt-0">Allied Races must complete the cooking/fishing achievements of their racial zone first before moving on to the others.</li>
-                </ul>
-                <img src="images/oldsoilder.png" class="w-1/2 h-fill rounded-r-[24px] ml-6" alt="temp">
-              </div>
-              <!-- End of Rules -->
-            </div>
-          </div>
-        </div>
+        </div> -->
+        <!-- End Of Class Grid -->
         
     </body>
     <!-- Footer -->
-    <footer>
-      <p class="flex justify-center items-center text-white font-semibold">&copy Will Marda 2023. Images belong to Blizzard and dcmjs</p>
-        <script src="script.js"></script>
+    <footer class="mt-12">
+      <p class="flex justify-center items-center text-white font-semibold">&copy IGC 2023.</p>
+      <p class="flex justify-center text-center items-center text-white font-semibold">Images belong to Blizzard, dcmjs, and other artists. Thank you all for your hard work.</p>
+        <!-- <script src="script.js"></script> -->
     </footer>
 
 </html>
