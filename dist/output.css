@@ -2273,10 +2273,6 @@ video {
   opacity: 0;
 }
 
-.opacity-\[0\.5\] {
-  opacity: 0.5;
-}
-
 .opacity-\[0\.75\] {
   opacity: 0.75;
 }
@@ -2592,23 +2588,22 @@ video {
   content: var(--tw-content);
 }
 
-/* Add this class to the image you want to animate */
+/* Add this class to the card you want to animate */
 
 .fade-in {
   opacity: 0;
-  animation: fadeIn 1.5s ease-in-out forwards;
-  transition-delay: 64s;
-  /* Add a delay of 0.5 seconds */
+  animation: fade-in 1s ease-in-out forwards;
+  transition-delay: 32s;
 }
 
 /* Define the fadeIn animation using keyframes */
 
-@keyframes fadeIn {
-  from {
+@keyframes fade-in {
+  0% {
     opacity: 0;
   }
 
-  to {
+  100% {
     opacity: 0.5;
   }
 }
@@ -2626,10 +2621,12 @@ video {
 @keyframes card-fade-in {
   0% {
     opacity: 0;
+    transform: translateY(50px);
   }
 
   100% {
     opacity: 1;
+    transform: translateY(0px);
   }
 }
 

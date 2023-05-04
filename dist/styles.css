@@ -3,23 +3,6 @@
 @tailwind utilities;
 
 
- /* Add this class to the card you want to animate */
- .fade-in {
-  opacity: 0;
-  animation: fade-in 1s ease-in-out forwards;
-  transition-delay: 32s; 
-}
-
-/* Define the fadeIn animation using keyframes */
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
-
   /* Add this class to the card you want to animate */
 .fade-in-card {
   opacity: 0;
@@ -31,11 +14,9 @@
 @keyframes card-fade-in {
   0% {
     opacity: 0;
-    transform: translateY(50px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
   }
 }
 
