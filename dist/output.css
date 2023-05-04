@@ -655,12 +655,12 @@ video {
   top: -364px;
 }
 
-.top-\[20rem\] {
-  top: 20rem;
-}
-
 .top-\[-380px\] {
   top: -380px;
+}
+
+.top-\[20rem\] {
+  top: 20rem;
 }
 
 .isolate {
@@ -2281,6 +2281,10 @@ video {
   opacity: 0.8;
 }
 
+.opacity-\[0\.75\] {
+  opacity: 0.75;
+}
+
 .bg-blend-normal {
   background-blend-mode: normal;
 }
@@ -2576,6 +2580,25 @@ video {
 .content-\[\'this-is-also-valid\]-weirdly-enough\'\] {
   --tw-content: 'this-is-also-valid]-weirdly-enough';
   content: var(--tw-content);
+}
+
+/* Add this class to the image you want to animate */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Define the fadeIn animation using keyframes */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.5;
+  }
 }
 
 @media (min-width: 640px) {

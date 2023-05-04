@@ -18,7 +18,9 @@ function preLoadImage(img)
 
     // Add transition from the placeholder to the real image
     img.addEventListener('load', () => {
-        img.classList.add('fade-in');
+        console.log("Loading Image!")
+        img.classList.add('transition', 'fade-in');
+        img.classList.remove('opacity-0');
         });
     
         // Remove the data-src attribute to avoid loading the image again
