@@ -2131,6 +2131,10 @@ video {
   font-size: 1rem;
 }
 
+.text-\[0\.85rem\] {
+  font-size: 0.85rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2751,6 +2755,10 @@ video {
 
   .sm\:mt-80 {
     margin-top: 20rem;
+  }
+
+  .sm\:mt-\[12rem\] {
+    margin-top: 12rem;
   }
 
   .sm\:grid-cols-1 {
