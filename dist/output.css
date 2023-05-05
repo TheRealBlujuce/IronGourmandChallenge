@@ -2143,6 +2143,14 @@ video {
   font-size: 4rem;
 }
 
+.text-\[1\.125rem\] {
+  font-size: 1.125rem;
+}
+
+.text-\[4\.5rem\] {
+  font-size: 4.5rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
