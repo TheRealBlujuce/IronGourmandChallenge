@@ -5,7 +5,7 @@ const cards = document.querySelectorAll('.card');
 
 const cardOptions = {
   threshold: 0.5,
-  rootMargin: '0px 0px -100px 0px'
+  rootMargin: '0px 0px -125px 0px'
 };
 
 const cardObserver = new IntersectionObserver(entries => {
@@ -31,7 +31,7 @@ const images = document.querySelectorAll("[data-src]");
 
 const imgOptions = {
     threshold: 0.5,
-    rootMargin: "0px 0px -100px 0px"
+    rootMargin: "0px 0px -125px 0px"
 }
 
 function preLoadImage(img)
